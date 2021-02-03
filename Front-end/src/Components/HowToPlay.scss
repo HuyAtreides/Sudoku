@@ -1,0 +1,109 @@
+#how-to-play {
+  h1 {
+    color: #344861;
+  }
+  #how-to-play-header {
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: #bec6d4;
+    #how-to-play-wraper {
+      display: flex;
+      width: 94%;
+      margin: auto;
+      justify-content: space-between;
+      @media screen and (min-width: 768px) {
+        width: 70%;
+        max-width: 1050px;
+      }
+
+      .play-sudoku {
+        color: #7c7d7a;
+        margin-top: 0.8rem;
+        ul {
+          list-style: none;
+          font-size: 20px;
+          font-weight: bold;
+          a {
+            text-decoration: none;
+            color: #7c7d7a;
+          }
+          li {
+            cursor: pointer;
+            &:hover {
+              #underline {
+                animation-name: underline;
+                animation-duration: 0.4s;
+                animation-fill-mode: forwards;
+                height: 2px;
+                background-color: #4a90e2;
+                margin: 2px auto;
+              }
+              @keyframes underline {
+                0% {
+                  width: 0px;
+                }
+                100% {
+                  width: 102%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .how-to-play-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    #img {
+      width: 90%;
+      margin: auto;
+      max-width: 900px;
+      margin-top: 25px;
+    }
+    .how-to-play-content {
+      width: 95%;
+      margin: auto;
+      max-width: 1050px;
+      margin-top: 50px;
+      @media screen and (min-width: 768px) {
+        width: 60%;
+      }
+      .rule {
+        color: #6e7c8c;
+        ul {
+          background-color: #f3f6fa;
+          text-align: left;
+          margin-top: 35px;
+          li {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            @media screen and (min-width: 768px) {
+              font-size: 18px;
+            }
+          }
+        }
+        #example-image-rule {
+          width: 100%;
+          margin: 10px auto;
+          @media screen and (min-width: 768px) {
+            width: 60%;
+            max-width: 600px;
+          }
+        }
+        p {
+          text-align: justify;
+          line-height: 2;
+          font-size: 17px;
+          margin-top: 30px;
+          @media screen and (min-width: 768px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.game-wraper {
+  width: 60%;
+  display: flex;
+  margin-top: 15px;
+  height: 75vh;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    width: 98%;
+    max-width: 470px;
+    height: auto;
+
+    min-height: 355px;
+  }
+  .controls-pad-mobile {
+    display: none;
+    justify-content: space-between;
+    color: #344861;
+    font-size: 23px;
+    margin-top: 15px;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+    $controlpads: visualize, hint, erase;
+
+    @each $controlpad in $controlpads {
+      .#{$controlpad} {
+        grid-area: $controlpad;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .number-pad-mobile {
+    display: none;
+    justify-content: space-evenly;
+    color: #344861;
+    font-size: 35px;
+    margin-top: 5px;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+  }
+}

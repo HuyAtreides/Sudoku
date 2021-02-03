@@ -1,0 +1,102 @@
+#tips {
+  h1 {
+    color: #344861;
+  }
+  #tips-header {
+    border-bottom: solid;
+    border-width: 1px;
+    border-bottom-color: #bec6d4;
+    #tips-wraper {
+      display: flex;
+      width: 94%;
+      margin: auto;
+      justify-content: space-between;
+      @media screen and (min-width: 768px) {
+        width: 70%;
+        max-width: 1050px;
+      }
+
+      .play-sudoku {
+        color: #7c7d7a;
+        margin-top: 0.8rem;
+        ul {
+          list-style: none;
+          font-size: 20px;
+          font-weight: bold;
+          a {
+            text-decoration: none;
+            color: #7c7d7a;
+          }
+          li {
+            cursor: pointer;
+            &:hover {
+              #underline {
+                animation-name: underline;
+                animation-duration: 0.4s;
+                animation-fill-mode: forwards;
+                height: 2px;
+                background-color: #4a90e2;
+                margin: 2px auto;
+              }
+              @keyframes underline {
+                0% {
+                  width: 0px;
+                }
+                100% {
+                  width: 102%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .tips-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    #tips-entry-image {
+      width: 90%;
+      margin: auto;
+      max-width: 900px;
+      margin-top: 25px;
+    }
+    .tips-content {
+      width: 95%;
+      margin: auto;
+      max-width: 1050px;
+      margin-top: 50px;
+      @media screen and (min-width: 768px) {
+        width: 60%;
+      }
+      p {
+        color: #6e7c8c;
+        font-size: 17px;
+        line-height: 2;
+        text-align: justify;
+        margin-top: 30px;
+        @media screen and (min-width: 768px) {
+          font-size: 20px;
+        }
+      }
+      #tips-content-image {
+        width: 100%;
+        margin: 10px auto;
+        @media screen and (min-width: 768px) {
+          width: 95%;
+          max-width: 600px;
+        }
+      }
+      a {
+        background-color: rgba(187, 239, 253, 0.3);
+        color: #6e7c8c;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

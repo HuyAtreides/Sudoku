@@ -1,0 +1,29 @@
+#timer {
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+  }
+  #circle {
+    display: inline-block;
+    width: 29px;
+    height: 27px;
+    text-align: center;
+    padding-top: 2px;
+    border: 1px solid;
+    border-radius: 100%;
+    margin-right: 4px;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      padding-top: 0px;
+      width: 27px;
+      height: 25px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .fa-play {
+      margin-left: 4px;
+    }
+  }
+}

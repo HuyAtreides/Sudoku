@@ -1,0 +1,103 @@
+header {
+  border-bottom: solid;
+  border-width: 1px;
+  border-bottom-color: #bec6d4;
+
+  #header-wraper {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+
+    .title-and-bars {
+      display: none;
+      justify-content: space-between;
+      width: 27%;
+      max-width: 97px;
+      @media screen and (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        i {
+          z-index: 1002;
+          color: #7c7d7a;
+        }
+
+        h2 {
+          font-size: 20px;
+          color: #344861;
+        }
+      }
+    }
+    @media screen and (max-width: 1024px) {
+      width: 95%;
+    }
+    h1 {
+      color: #344861;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    .about-sudoku {
+      width: 33%;
+      display: block;
+      color: #7c7d7a;
+      margin-top: 0.7rem;
+      @media screen and (max-width: 1024px) {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+        z-index: 1000;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        font-size: 20px;
+        font-weight: bold;
+        @media screen and (max-width: 1024px) {
+          height: 20%;
+          max-height: 150px;
+          padding: 0px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+        }
+        a {
+          text-decoration: none;
+          color: #7c7d7a;
+        }
+        li {
+          cursor: pointer;
+          &:hover {
+            #underline {
+              animation-name: underline;
+              animation-duration: 0.4s;
+              animation-fill-mode: forwards;
+              height: 2px;
+              background-color: #4a90e2;
+              margin: 2px auto;
+            }
+            @keyframes underline {
+              0% {
+                width: 0px;
+              }
+              100% {
+                width: 102%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
